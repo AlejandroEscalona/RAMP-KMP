@@ -6,7 +6,7 @@ import androidx.compose.runtime.Composable
 
 @Composable
 fun CharactersScreen() {
-    Box() {
+    Box {
         Text(text = "Characters")
     }
 }

@@ -7,6 +7,9 @@ import androidx.compose.runtime.Composable
 @Composable
 fun EpisodesScreen() {
     Box() {
-        Text(text = "Episodes")
+        val name = helloName()
+        Text(text = "Episodes $name")
     }
 }
+
+expect fun helloName(): String
