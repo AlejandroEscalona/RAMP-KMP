@@ -1,15 +1,13 @@
 package kmp.project.rickandmortyapp.ui.home.tabs.episodes
 
-import androidx.compose.foundation.layout.Box
-import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import org.koin.compose.viewmodel.koinViewModel
+import org.koin.core.annotation.KoinExperimentalAPI
 
+@OptIn(KoinExperimentalAPI::class)
 @Composable
 fun EpisodesScreen() {
-    Box() {
-        val name = helloName()
-        Text(text = "Episodes $name")
-    }
+    val episodesViewModel = koinViewModel<EpisodesViewModel>()
+
 }
 
-expect fun helloName(): String
