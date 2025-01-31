@@ -9,6 +9,7 @@ import io.ktor.http.encodedPath
 import io.ktor.serialization.kotlinx.json.json
 import kmp.project.rickandmortyapp.data.RepositoryImpl
 import kmp.project.rickandmortyapp.data.remote.ApiService
+import kmp.project.rickandmortyapp.data.remote.paging.CharactersPagingSource
 import kmp.project.rickandmortyapp.domain.Repository
 import kotlinx.serialization.json.Json
 import org.koin.core.module.dsl.factoryOf
@@ -32,4 +33,5 @@ val dataModule = module {
         }
     }
     factoryOf(::ApiService)
+    factoryOf(::CharactersPagingSource)
     factoryOf(::RepositoryImpl) bind Repository::class}
