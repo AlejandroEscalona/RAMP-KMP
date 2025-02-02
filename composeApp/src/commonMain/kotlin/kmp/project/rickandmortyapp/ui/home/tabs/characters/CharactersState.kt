@@ -7,5 +7,5 @@ import kotlinx.coroutines.flow.emptyFlow
 
 data class CharactersState(
     val characterOfTheDay: CharacterModel? = null,
-    val characters: Flow<PagingData<CharacterModel>>? = emptyFlow()
+    val characters: Flow<PagingData<CharacterModel>> = emptyFlow()
 )

@@ -1,5 +1,8 @@
 package kmp.project.rickandmortyapp.data.remote.response
 
+import kotlinx.serialization.Serializable
+
+@Serializable
 data class InfoResponse(
     val count: Int,
     val pages: Int,
